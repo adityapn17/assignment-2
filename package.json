@@ -1,0 +1,35 @@
+{
+  "name": "hono-api-app",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "db:migrate": "pnpm prisma migrate dev",
+    "db:generate": "pnpm prisma generate",
+    "db:studio": "pnpm prisma studio"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@prisma/engines",
+      "better-sqlite3",
+      "prisma"
+    ]
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.19.9",
+    "@hono/zod-validator": "^0.7.6",
+    "@prisma/adapter-better-sqlite3": "^7.7.0",
+    "@prisma/client": "^7.7.0",
+    "better-sqlite3": "^12.8.0",
+    "dotenv": "^17.4.1",
+    "hono": "^4.12.3",
+    "prisma": "^7.7.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.39",
+    "tsx": "^4.7.1",
+    "typescript": "^5.8.3"
+  }
+}

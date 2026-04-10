@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Product{
+  id Int @id @default(autoincrement())
+  name String
+  price Int
+}
+model Review{
+  id Int @id @default(autoincrement())
+  title String
+  content String
+}
+model Todo{
+  id Int @id @default(autoincrement())
+  title String
+  content String
+}
